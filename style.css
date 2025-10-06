@@ -1,90 +1,263 @@
-body{
-    font-family:'Inter',sans-serif;
+/* Basic Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    background-color:rgb(70, 55, 55);
-    color: white;
-    padding-top: 60px;
-}
-.navbar {
-    /* position: fixed; */
-    width: 100px;
-    /* background-color:#111; */
-    padding:15px 30px;
-    box-shadow:2 2px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* z-index: 1000; */
-}
-.logo {
-    height:200px;
-    width: 300px;
-    padding:10px;
-    border-radius:40px;
-    /* display:flex; */
-}
-.nav-links {
-    list-style:none;
-    display: flex;
-    gap: 25px;
-}
-.nav-links a {
     color: #333;
-    font-weight: 500;
-    /* transition: color 0.2s ease; */
+    background-color: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+/* Header and Navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Keep links to the right on desktop */
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* --- DESKTOP NAV ICON STYLING (UPDATED) --- */
+.nav-links a {
     text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    /* Ensure only the text is styled, or use an icon solution */
 }
+
+.nav-links li a {
+    /* Set display to inline-flex to easily combine icon and text */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem; /* Small space between icon and text */
+}
+
+
+
+
 .nav-links a:hover {
-    color: #0077cc;
+    color: #007bff;
 }
-.section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
+
+/* --- HAMBURGER MENU STYLES (Kept from previous update) --- */
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+    padding: 0 10px;
 }
-h1, h2 {
-    color: #111;
-    margin-bottom: 15px;
-}
-p, ul {
-    margin-bottom: 20px;
-}
+
+/* Hero Section */
 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
-    background-color:rgba(109, 20, 39, 0.911);
-   
+    height: 80vh;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    padding: 2rem;
 }
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
 .hero h1 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
+
+.tagline {
+    font-size: 1.2rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* General Section Styling */
+.section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.section p, .section li {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
 }
+
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
 .contact-form button {
-    padding: 12px;
-    background-color: #0077cc;
-    color: white;
-    border-radius: 6px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 1rem;
     font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
+
 .contact-form button:hover {
-    background-color: #005fa3;
+    background: #0056b3;
 }
+
+.contact-form a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-form p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 30px 10px;
-    font-size: 0.9rem;
-    background-color: #f1f1f1;
-    color: #555;
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust navbar layout for mobile */
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    /* 1. Show the hamburger menu icon */
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    /* 2. Hide the desktop nav links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 4.6rem;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        z-index: 1000;
+        gap: 0;
+    }
+    
+    .nav-links li {
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-links li a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+        /* Remove the icon on mobile menu for cleaner look */
+        justify-content: center;
+    }
+
+    .nav-links li a::before {
+        content: none; /* Hide the icon on mobile */
+    }
+    
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* 3. Class to show the menu (toggled by JavaScript) */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
 }

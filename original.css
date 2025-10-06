@@ -1,0 +1,120 @@
+/* Global Styles and Body Reset */
+body{
+    font-family: 'Inter', sans-serif; /* Sets the primary font for the entire document */
+    line-height: 1.6; /* Improves readability by setting the spacing between lines of text */
+    background-color: rgb(70, 55, 55); /* Sets a dark background color for the body */
+    color: white; /* Sets the default text color to white for contrast */
+    padding-top: 60px; /* Adds space above the content, useful if the header is fixed */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    /* position: fixed; */ /* (Commented out) Would fix the navigation to the top of the viewport */
+    width: 100px; /* Sets the width of the navigation bar container */
+    /* background-color:#111; */ /* (Commented out) Would set a dark background for the navbar */
+    padding: 15px 30px; /* Adds vertical and horizontal padding inside the navbar */
+    box-shadow: 2 2px 8px; /* Adds a shadow to the navbar for depth (Note: syntax here might be slightly off; usually requires color) */
+    display: flex; /* Enables Flexbox layout for arranging child items */
+    justify-content: space-between; /* Spaces out items (e.g., logo and links) horizontally */
+    align-items: center; /* Vertically centers the items within the navbar */
+    /* z-index: 1000; */ /* (Commented out) Would ensure the navbar stays on top of other elements */
+}
+
+/* Logo/Image Styling in the Hero Section */
+.logo {
+    height: 200px; /* Sets a fixed height for the image/logo */
+    width: 300px; /* Sets a fixed width for the image/logo */
+    padding: 10px; /* Adds padding around the image */
+    border-radius: 40px; /* Rounds the corners of the image */
+    /* display:flex; */ /* (Commented out) Unnecessary on a single image element */
+}
+
+/* Navigation Links List */
+.nav-links {
+    list-style: none; /* Removes the default bullet points from the list items */
+    display: flex; /* Arranges the list items (links) horizontally */
+    gap: 25px; /* Adds space between each navigation link */
+}
+
+/* Individual Navigation Links */
+.nav-links a {
+    color: #333; /* Sets the text color of the links (Note: this contrasts poorly with white body text) */
+    font-weight: 500; /* Makes the link text slightly bolder */
+    /* transition: color 0.2s ease; */ /* (Commented out) Would create a smooth color change on hover */
+    text-decoration: none; /* Removes the default underline from the links */
+}
+
+/* Navigation Links Hover State */
+.nav-links a:hover {
+    color: #0077cc; /* Changes the link color when the mouse hovers over it */
+}
+
+/* General Section Layout (About, Contact) */
+.section {
+    padding: 60px 20px; /* Adds vertical and horizontal padding inside each main section */
+    max-width: 900px; /* Limits the maximum width of the content area */
+    margin: auto; /* Centers the section block horizontally on the page */
+}
+
+/* Heading (H1, H2) Styles */
+h1, h2 {
+    color: #111; /* Sets a dark color for headings (Note: this contrasts poorly with white body text) */
+    margin-bottom: 15px; /* Adds space below the headings */
+}
+
+/* Paragraph and Unordered List Spacing */
+p, ul {
+    margin-bottom: 20px; /* Adds space below paragraphs and lists */
+}
+
+/* Hero Section (Home) Styling */
+.hero {
+    text-align: center; /* Centers the content (text, image) inside the hero section */
+    padding: 80px 20px; /* Adds significant vertical padding to make the section prominent */
+    background-color: rgba(109, 20, 39, 0.911); /* Sets a dark red background with slight transparency */
+}
+
+/* Hero Section H1 (Name) */
+.hero h1 {
+    font-size: 1.2rem; /* Sets a slightly larger font size for the main title */
+    margin-bottom: 10px; /* Adds space below the H1 */
+}
+
+/* Contact Form Layout */
+.contact-form {
+    display: flex; /* Arranges form elements using Flexbox */
+    flex-direction: column; /* Stacks form elements vertically */
+    gap: 15px; /* Adds space between the form elements (inputs, textarea, button) */
+}
+
+/* Contact Form Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+    padding: 12px; /* Adds space inside the input fields */
+    border: 1px solid #ccc; /* Sets a light grey border */
+    font-size: 1rem; /* Sets the font size for text inside the fields */
+}
+
+/* Contact Form Button Styling */
+.contact-form button {
+    padding: 12px; /* Adds padding inside the button */
+    background-color: #007acc; /* Sets a blue background color */
+    color: white; /* Sets the text color to white */
+    border-radius: 6px; /* Rounds the corners of the button */
+    font-size: 1rem; /* Sets the font size for the button text */
+    cursor: pointer; /* Changes the mouse cursor to a pointer when hovering over the button */
+}
+
+/* Contact Form Button Hover State */
+.contact-form button:hover {
+    background-color: #007acc; /* Changes the background color on hover (currently the same color) */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center; /* Centers the footer text */
+    padding: 30px 10px; /* Adds padding inside the footer */
+    font-size: 0.9rem; /* Makes the copyright text slightly smaller */
+    background-color: #f1f1f1; /* Sets a light grey background */
+    color: #555; /* Sets a dark grey text color */
+}
